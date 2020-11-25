@@ -28,6 +28,21 @@ public class WeatherController {
         return "index";
     }
 
+    @RequestMapping(value = {"/adminLogin.html"})
+    public String adminLogin(){
+        return "adminLogin";
+    }
+
+    @RequestMapping(value = {"/reg.html"})
+    public String reg(){
+        return "reg";
+    }
+
+    @RequestMapping(value = {"/userLogin.html"})
+    public String userLogin(){
+        return "userLogin";
+    }
+
     @RequestMapping("/all")
     public String AllWeather(HttpSession session, Model model) {
         List<Province> provs = weatherService.findAllWithCities();

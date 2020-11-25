@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.work.Weather.mappers.UserMapper">
+    <resultMap type="com.work.Weather.entities.User" id="Getcitycode">
+        <id column="ucity" property="ucity"/>
+        <!-- 一对一映射 -->
+        <association property="city" javaType="com.work.Weather.entities.City">
+            <id column="ucity" property="cname"/>
+            <result column="code" property="code"/>
+        </association>
+    </resultMap>
+    
+    <select id="getCode" parameterType="String" resultMap="Getcitycode">
+        select t1.code, t1.cname, t2.ucity from city t1, message t2 where t1.cname=t2.ucity and t2.uname=#{uname} 
+    </select>
+</mapper>

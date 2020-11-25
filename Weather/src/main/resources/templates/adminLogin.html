@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>管理员登录</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.5">
+
+        <!-- Bootstrap core CSS -->
+        <link href="/css/bootstrap.css" rel="stylesheet">
+
+
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+        <link href="/css/signin.css" rel="stylesheet">
+    </head>
+
+    <body class="text-center">
+            <form name="form3" class="form-signin" action="/admin/login" method="post">
+                <h1 class="h3 mb-3 font-weight-normal">管理员登录</h1>
+                <label for="inputEmail" class="sr-only">管理员姓名</label>
+                <input type="text" id="uname" name="uname" class="form-control" placeholder="管理员姓名" required autofocus>
+                <label for="inputPassword" class="sr-only">密码</label>
+                <input type="password" id="upwd" name="upwd" class="form-control" placeholder="密码" required>
+            <input class="btn btn-lg btn-primary btn-block" type="submit" value="登录">
+            </form>
+        </div>
+    </body>
+</html>
