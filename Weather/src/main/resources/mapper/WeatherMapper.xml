@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.work.Weather.mappers.WeatherMapper">
+    <resultMap id="ProvBean" type="com.work.Weather.entities.Province">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+
+        <!-- 一对多映射 -->
+        <collection property="cities" ofType="com.work.Weather.entities.City">
+            <id column="code" property="code"/>
+            <result column="pid" property="pid"/>
+            <result column="cname" property="cname"/>
+        </collection>
+    </resultMap>
+
+    <select id="listProvAndCities" resultMap="ProvBean">
+        select t1.id, t1.name, t2.pid, t2.code, t2.cname from province t1, city t2 where t1.id = t2.pid order by t1.id, t2.code
+    </select>
+
+    <select id="getCodeByCname" parameterType="String" resultType="String">
+        select code from city where cname=#{cname}
+    </select>
+</mapper>

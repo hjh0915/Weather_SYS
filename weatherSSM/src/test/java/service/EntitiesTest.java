@@ -65,26 +65,26 @@ public class EntitiesTest {
         // }
     }
 
-    @Test
-    public void testGetCode1() {
-        String uname = "胡俊华";
-        User user = userMapper.getCode(uname);
-        System.out.println(user.getCity().getCode());
-    }
+    // @Test
+    // public void testGetCode1() {
+    //     String uname = "胡俊华";
+    //     User user = userMapper.getCode(uname);
+    //     System.out.println(user.getCity().getCode());
+    // }
 
-    @Test
-    public void testGetCodeByCname() {
-        String cname = "南昌";
-        String code = weatherMapper.getCodeByCname(cname);
-        System.out.println(code);
-    }
+    // @Test
+    // public void testGetCodeByCname() {
+    //     String cname = "南昌";
+    //     String code = weatherMapper.getCodeByCname(cname);
+    //     System.out.println(code);
+    // }
 
-    @Test 
-    public void testGetCodeByCname2() {
-        String cname = "南昌";
-        String code = weatherService.getCodeByCname(cname);
-        System.out.println(code);
-    }
+    // @Test 
+    // public void testGetCodeByCname2() {
+    //     String cname = "南昌";
+    //     String code = weatherService.getCodeByCname(cname);
+    //     System.out.println(code);
+    // }
 
     // @Test 
     // public void testUpdate() {
